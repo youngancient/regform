@@ -4,23 +4,39 @@ document.addEventListener("DOMContentLoaded", function() {
         let lname = document.querySelector("form #lname").value;
         let email = document.querySelector("form #email").value;
         if(fname == ""){
-            error(".fname");
+            display(".fname");
         }
         if(lname == ""){
-            error(".lname");
+            display(".lname");
         }
         if(email == ""){
-            error(".email");
+            display(".email");
         }
         if(document.querySelector("form #password").value.length < 1){
-            error(".password");
+            display(".password");
         } else if(document.querySelector("form #password").value.length < 8){
             document.querySelector("form .password").innerHTML = "Password not long enough - less than 8 characters!";
-            error(".password");
+            display(".password");
+        }
+        if(fname.length > 1){
+            display(".sucess");
+            reset();
+            deadAm();
         }
     };
 });
 
-function error(className){
+function display(className){
     document.querySelector(`form ${className}`).style.display = "block";
+}
+function reset(){
+    document.querySelector("form #fname").value = "";
+    document.querySelector("form #lname").value = "";
+    document.querySelector("form #email").value = "";
+    document.querySelector("form #password").value = "";
+}
+function deadAm(){
+document.querySelectorAll("form .error").forEach((each) =>{
+    each.style.display = "none";
+});
 }

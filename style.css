@@ -84,12 +84,22 @@ h4 {
 .spaced {
   margin-top: 15px;
 }
-p{
+p{ 
+  font-weight: 500;
+}
+form .error{
   font-size: 10px;
+  text-align: end;
   margin-top: 5px;
   color: hsl(0, 100%, 74%);
-  text-align: end;
-  font-weight: 500;
+}
+form .sucess{
+  font-size: 11px;
+  color: hsl(154, 59%, 51%);
+  text-align: center;
+  margin-bottom: 5px;
+}
+.error, .sucess{
   display: none;
 }
 form {
