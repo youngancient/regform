@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.querySelector("form .password").innerHTML = "Password not long enough - less than 8 characters!";
             display(".password");
         }
-        if(fname.length > 1){
+        if(fname.length > 1 && lname.length > 1 && document.querySelector("form #password").value.length >= 8 ){
             display(".sucess");
             reset();
             deadAm();
