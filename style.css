@@ -19,6 +19,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* I used 100vh because i needed to position the items well */
+  height: auto;
 }
 .main {
   display: flex;
@@ -120,10 +122,12 @@ input {
 }
 input[type="password"] {
   font-family: Verdana;
+  font-size: 18px;
 }
 ::placeholder {
   color: hsl(0,0%,0%, 0.7);
   font-weight: 400;
+  font-size: 15px;
 }
 button {
   width: 100%;
@@ -156,6 +160,11 @@ a{
 }
 a:hover{
   text-decoration: underline solid hsl(0, 100%, 74%);
+}
+@media screen and (min-width: 500px) and (max-width: 1028px) {
+  .sub-second{
+    width: 400px;
+  }
 }
 @media screen and (min-width: 1028px) {
   body {
