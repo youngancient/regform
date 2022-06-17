@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
             reset();
             deadAm();
         }
+        return false;
     };
 });
 
