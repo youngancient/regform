@@ -1,4 +1,4 @@
- required<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -36,19 +36,24 @@
             <h5>then $20/mo. thereafter</h5>   
           </div>
           <div class="form-container">
-            <form>
-              <input type="text"  placeholder="First name" required>
-              <input type="text"  placeholder="Last name" class="spaced" required>
-              <input type="email" placeholder="Email Address" class="spaced" required>
-              <input type="password" placeholder="Password" class="spaced" required>
-              <a href="#"><button class="spaced">
+            <form id="form1">
+              <input type="text"  placeholder="First name" id="fname">
+              <i><p class="error fname">First Name cannot be empty!</p></i>
+              <input type="text"  placeholder="Last name" class="spaced" id="lname">
+              <i><p class="error lname">Last Name cannot be empty!</p></i>
+              <input type="email" placeholder="Email Address" class="spaced" id="email">
+              <i><p class="error email">Looks Like this is not an email!</p></i>
+              <input type="password" placeholder="Password" class="spaced" id="password">
+              <i><p class="error password">Password cannot be empty!</p></i>
+              <button class="spaced" type="submit" form="form1">
                 CLAIM YOUR FREE TRIAL 
-              </button></a>
+              </button>
               <span class="spaced">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></span>
             </form>
           </div>
         </div>
       </div>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
